@@ -2,7 +2,7 @@
     "name": "chspp",
     "displayName": "ChessCodeEditor",
     "description": "Language support for the new language Chess++, allowing syntax highlighting and intellisense if possible",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "dudenology",
     "repository": {
         "type": "git",
