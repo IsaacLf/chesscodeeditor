@@ -2,11 +2,11 @@
     "name": "chspp",
     "displayName": "ChessCodeEditor",
     "description": "Language support for the new language Chess++, allowing syntax highlighting and intellisense if possible",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "dudenology",
     "repository": {
-        "type" : "git",
-        "url" : "https://dev.azure.com/IsaacLf/_git/chesstexteditor"
+        "type": "git",
+        "url": "https://dev.azure.com/IsaacLf/_git/chesstexteditor"
     },
     "engines": {
         "vscode": "^1.28.0"
@@ -15,17 +15,26 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "chesspp",
-            "aliases": ["Chess++", "chesspp"],
-            "extensions": [".chspp"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "chesspp",
-            "scopeName": "source.chspp",
-            "path": "./syntaxes/chesspp.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "chesspp",
+                "aliases": [
+                    "Chess++",
+                    "chesspp"
+                ],
+                "extensions": [
+                    ".chspp"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "chesspp",
+                "scopeName": "source.chspp",
+                "path": "./syntaxes/chesspp.tmLanguage.json"
+            }
+        ]
     },
     "icon": "/logo/chess.png",
     "galleryBanner": {
