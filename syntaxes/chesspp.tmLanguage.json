@@ -1,0 +1,107 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Chess++",
+	"patterns": [
+		{
+			"include": "#class"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}		
+	],
+	"repository": {
+		"class":{
+			"begin": "(?=\\w?[\\w\\s]*(?:Round)\\s+\\w+)",
+			"end": "(End)(?:\\s*):(?:\\s*)(Round)",
+			"endCaptures": {
+				"0":{
+					"name": "keyword.control.chesspp"
+				},
+				"1":{
+					"name": "punctuation.separator.chesspp"
+				},
+				"2":{
+					"name": "storage.modifier.chesspp"
+				}
+			},
+			"name": "meta.class.chesspp",
+			"patterns": [
+				{
+					"include": "#storage-modifiers"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"captures": {
+						"1": {
+							"name": "storage.modifier.chesspp"
+						},
+						"2": {
+							"name": "entity.name.type.class.chesspp"
+						}
+					},
+					"match": "(Round)\\s+(\\w+)",
+					"name": "meta.class.identifier.chesspp"
+				}
+			]	
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.chesspp",
+				"match": "\\b(If|Else|Return|Pawn|Bishop|Knight|King|Rook|Tie|Check(mate)?)\\b"
+			}]
+		},
+		"strings": {
+			"patterns":[{
+				"name": "string.quoted.double.chesspp",
+				"begin": "\"",
+				"beginCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.begin.chesspp"
+					}
+				},
+				"end": "\"",
+				"endCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.end.chesspp"
+					}
+				},
+				"patterns": [{
+					"name": "constant.character.escape.chesspp",
+					"match": "\\\\."
+				}]
+			},
+			{
+				"name":"string.quoted.single.chesspp",
+				"begin": "'",
+				"beginCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.begin.chesspp"
+					}
+				},
+				"end": "'",
+				"endCaptures": {
+					"0": {
+						"name": "punctuation.definition.string.end.chesspp"
+					}
+				},
+				"patterns": [{
+					"name":"constant.character.escape.chesspp",
+					"match": "\\\\."
+				}]
+			}
+			]
+		},
+		"storage-modifiers": {
+			"patterns": [{
+				"match": "\\b(Public|Private|Protected)\\b",
+				"name": "storage.modifier.chesspp"
+			}]
+		}
+	},
+	"scopeName": "source.chspp"
+}

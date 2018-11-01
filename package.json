@@ -1,0 +1,26 @@
+{
+    "name": "chspp",
+    "displayName": "ChessCodeEditor",
+    "description": "Language support for the new language Chess++, allowing syntax highlighting and intellisense if possible",
+    "version": "0.0.1",
+    "publisher": "dudenology",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "chesspp",
+            "aliases": ["Chess++", "chesspp"],
+            "extensions": [".chspp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "chesspp",
+            "scopeName": "source.chspp",
+            "path": "./syntaxes/chesspp.tmLanguage.json"
+        }]
+    }
+}
