@@ -13,3 +13,11 @@ Users appreciate release notes as you update your extension.
 ### 0.0.1
 
 Initial release of the current project, this is only a Alpha state of the project
+
+### 0.0.2
+
+Tryied to add and image and fail
+
+### 0.0.3
+
+Must be right

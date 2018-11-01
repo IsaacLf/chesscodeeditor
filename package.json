@@ -36,7 +36,7 @@
             }
         ]
     },
-    "icon": "/logo/chess.png",
+    "icon": "logo/chess.png",
     "galleryBanner": {
         "color": "#6223aa",
         "theme": "dark"
