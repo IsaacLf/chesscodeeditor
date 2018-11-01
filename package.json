@@ -4,6 +4,10 @@
     "description": "Language support for the new language Chess++, allowing syntax highlighting and intellisense if possible",
     "version": "0.0.1",
     "publisher": "dudenology",
+    "repository": {
+        "type" : "git",
+        "url" : "https://dev.azure.com/IsaacLf/_git/chesstexteditor"
+    },
     "engines": {
         "vscode": "^1.28.0"
     },
@@ -22,5 +26,10 @@
             "scopeName": "source.chspp",
             "path": "./syntaxes/chesspp.tmLanguage.json"
         }]
+    },
+    "icon": "/logo/chess.png",
+    "galleryBanner": {
+        "color": "#6223aa",
+        "theme": "dark"
     }
 }
